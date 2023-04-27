@@ -24,13 +24,13 @@ public class PlayerService extends Service {
         super.onCreate();
 
         int importance = NotificationManager.IMPORTANCE_HIGH;
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)//TODO: закрытие уведомления
-                .setContentText("Playing...")
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentText("Проигрывание")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setStyle(new NotificationCompat.BigTextStyle()
-                        .bigText("best player"))
-                .setContentTitle("Music Player");
+                        .bigText("J.S. BACH - Badinerie"))
+                .setContentTitle("Музыкальный плеер");
 
         NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Rudenok M.I. Notification", importance);
         channel.setDescription("MIREA Channel");
